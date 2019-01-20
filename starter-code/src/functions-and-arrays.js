@@ -1,5 +1,9 @@
 // Find the maximum
-
+let maxOfTwoNumbers=(num1,num2)=>{
+  if(num1>num2)
+    return num1
+      return num2
+}
 // Finding Longest Word
 var words = [
   'mystery',
@@ -10,14 +14,35 @@ var words = [
   'orchard',
   'crackpot'
 ];
-
+  let findLongestWord =(words)=>{
+      if(words.length==0)
+        return undefined
+      let max=''
+      for(let i=0;i<words.length;i++){
+        if(words[i].length>max.length)
+          max=words[i]
+      }
+    return max
+  }
 // Calculating a Sum
 
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+let sumArray =(num)=>{
+  let total=0
+  for(let i=0;i<num.length;i++)
+  total+=num[i]
+  return total
+}
 // Calculate the Average
 
 var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+let averageNumbers =(num)=>{
+  if(num.length==0)
+    return undefined
+  return sumArray(num)/num.length
+}
 
 // Array of Strings
 var wordsArr = [
@@ -32,6 +57,10 @@ var wordsArr = [
   'fuel',
   'palace'
 ];
+  let averageWordLength =(words)=>{
+    let newarray=words.map(word=>word.length);
+    return averageNumbers(newarray)
+  }
 
 // Unique Arrays
 var wordsUnique = [
@@ -47,7 +76,11 @@ var wordsUnique = [
   'simple',
   'bring'
 ];
-
+let uniquifyArray = (words)=>{
+  if(words.length===0)
+    return undefined
+return words.filter( (item,index,array)=> array.indexOf(item)===index )
+}
 // Finding Elements
 var wordsFind = [
   'machine',
@@ -59,6 +92,10 @@ var wordsFind = [
   'truth',
   'disobedience'
 ];
+
+  let doesWordExist =(word,search)=>{
+    return word.includes(search)
+  }
 
 // Counting Repetion
 var wordsCount = [
@@ -74,7 +111,12 @@ var wordsCount = [
   'disobedience',
   'matter'
 ];
-// Bonus Quest
+
+let howManyTimes =(words,search)=>{
+  if(words.length===0)
+  return false
+  return words.filter(word=>word===search).length
+}
 
 var matrix = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
@@ -98,3 +140,6 @@ var matrix = [
   [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
+let greatestProduct=(mat)=>{
+  return;
+}
